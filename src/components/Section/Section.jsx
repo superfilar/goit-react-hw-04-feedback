@@ -1,16 +1,17 @@
+import React from 'react';
 import PropTypes from "prop-types";
 import css from "./Section.module.css";
 
-export default function Section({ children }) {
+const Section= ({ children }) => {
   return (
     <section className={css.section}>
-      <div className={css.container}>
         {children}
-      </div>
     </section>
   );
 }
 
-Section.prototype = {
-  title: PropTypes.string,
+Section.propTypes = {
+  title: PropTypes.string.isRequired,
 };
+
+export default Section;
